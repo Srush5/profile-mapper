@@ -1,0 +1,210 @@
+/* Admin Form */
+.admin-form {
+  background-color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.admin-form h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--dark-gray);
+}
+
+.form-group input[type="text"],
+.form-group input[type="url"],
+.form-group textarea {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="url"]:focus,
+.form-group textarea:focus {
+  color: var(--text-color);
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--light-gray);
+}
+
+.form-actions .button {
+  width: auto;
+}
+
+/* Admin List Section */
+.admin-container h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.admin-profile-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.admin-profile-item:last-child {
+  margin-bottom: 0;
+}
+
+.admin-profile-item:hover {
+  box-shadow: var(--card-shadow);
+}
+
+.admin-profile-thumbnail {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background-color: var(--light-gray);
+}
+
+.admin-profile-info {
+  flex-grow: 1;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.admin-profile-info strong {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-profile-address {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-profile-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.admin-profile-actions .button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  width: auto;
+}
+
+/* Admin Responsive Adjustments */
+@media (max-width: 768px) {
+  .admin-form {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .admin-form {
+    padding: 1rem 1.25rem;
+  }
+  .admin-form h3 {
+    font-size: 1.3rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .form-actions .button {
+    width: 100%;
+  }
+
+  .admin-container h2 {
+    font-size: 1.4rem;
+  }
+
+  .admin-profile-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .admin-profile-thumbnail {
+    margin-bottom: 0.75rem;
+  }
+  .admin-profile-info {
+    width: 100%;
+  }
+  .admin-profile-info strong,
+  .admin-profile-address {
+    white-space: normal;
+  }
+
+  .admin-profile-actions {
+    width: 100%;
+    margin-top: 0.75rem;
+    justify-content: flex-end;
+  }
+  .admin-profile-actions .button {
+    width: auto;
+  }
+}
