@@ -1,6 +1,6 @@
 {
   "name": "profile-mapper",
-  "homepage" : "https://srush5.github.io/profile-mapper",
+  "homepage": "https://srush5.github.io/profile-mapper",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
